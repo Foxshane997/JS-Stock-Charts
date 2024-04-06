@@ -6,4 +6,6 @@ async function main() {
 
 }
 
-main()
+async function main(){
+    
+}
