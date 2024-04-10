@@ -8,6 +8,10 @@ async function main() {
     let response = await fetch(apiUrl)
     let stocks = response.json()
 
+    let { GME, MSFT, DIS, BNTX } = stocks
+
+    
+
     return stocks
 }
 
