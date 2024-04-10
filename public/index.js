@@ -31,12 +31,12 @@ async function main() {
 
    // Overtime Chart
    new Chart(timeChartCanvas.getContext('2d'), {
-    type:line,
+    type:'line',
     data:{
         labels: stocks[0].values.map(value => value.datetime),
         datasets: stocks.map(stock => ({
         label: stock.meta.symbol,
-        BackgroundColor: getColor(stock.meta.symbol),
+        backgroundColor: getColor(stock.meta.symbol),
         borderColor: getColor(stock.meta.symbol),
         data: stock.values.map(value => parseFloat(value.high))
         }))
@@ -50,7 +50,7 @@ async function main() {
         labels: stocks.map(stock => stock.meta.symbol),
         datasets: [{
             label: 'highest',
-            BackgroundColor: stocks.map(stock => (
+            backgroundColor: stocks.map(stock => (
                 getColor(stock.meta.symbol)
             )),
             borderColor: stocks.map(stock => (
